@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       7a9c33e1-0d0f-476a-b211-19541017123b
+:END:
+#+title: Org Noweb Scripts
+* Description
+* Scripts
+** Return External File Contents
+*** Description
+*** Usage
+#+begin_src python :noweb yes
+  <<get-file("./README.org")>>
+#+end_src
+
+*** The Script
+#+NAME: get-file
+#+begin_src python :var file=""
+  return open(file, mode='r').read()
+#+end_src
